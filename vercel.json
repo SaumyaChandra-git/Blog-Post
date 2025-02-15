@@ -6,7 +6,11 @@
     ],
     "routes": [
       { "src": "/static/(.*)", "dest": "/django_project/staticfiles/$1" },
+      { "src": "/media/(.*)", "dest": "/django_project/media/$1" },
       { "src": ".*", "dest": "django_project/wsgi.py" }
-    ]
+    ],
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "django_project.settings"
+    }
   }
   
